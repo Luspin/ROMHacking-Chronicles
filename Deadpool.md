@@ -19,7 +19,7 @@ However, its isolated ROM signature did match a verified entry from the **[No-In
 
 I concluded that the only differences between the two files were in their iNES headers, and assumed the IPS file might overwrite them, so I applied it against a verified **No-Intro** ROM, but found serious graphical issues when loading the patched ROM in the [Mesen2](https://github.com/SourMesen/Mesen2) emulator:
 
-![[/Attachments/Screenshots/Deadpool%20-%20No-Intro%20-%20Graphical%20Issues.png]]
+![[../blob/main/Attachments/Screenshots/Deadpool%20-%20No-Intro%20-%20Graphical%20Issues.png]]
 
 After further investigation and a bit of trial-and-error, I found a different source ROM in the [NES Files](https://www.nesfiles.com/NES/Ninja_Gaiden/) page:
 
@@ -31,7 +31,7 @@ After further investigation and a bit of trial-and-error, I found a different so
 
 This matched neither of the intended **File** or **ROM** signatures, but after applying the IPS file against it, I noticed an improvement in the graphical issues; although other issues were still present, e.g. the Deadpool sprite was corrupted:
 
-![[/Attachments/Screenshots/Deadpool - NES Files - Graphical Issues.png]]
+![[../blob/main/Attachments/Screenshots/Deadpool - NES Files - Graphical Issues.png]]
 
 I then compared the iNES headers from the two **patched** ROM files:
 
@@ -48,7 +48,7 @@ After consulting with ChatGPT, I decided to modify the iNES headers of the **No-
 
 **Success!** I finally had a fully working ROM file for **Deadpool**™:
 
-![[/Attachments/Screenshots/Deadpool%20-%20No-Intro%20(Header%20Fix%201).png]]
+![[../blob/main/Attachments/Screenshots/Deadpool%20-%20No-Intro%20(Header%20Fix%201).png]]
 
 ChatGPT also suggested an additional cleanup of the iNES headers:
 
@@ -58,7 +58,7 @@ ChatGPT also suggested an additional cleanup of the iNES headers:
 
 This was confirmed to work flawlessly, so I generated a new IPS file:
 
-![[/Attachments/Files/Deadpool%20-%20No-Intro.ips]]
+![[../blob/main/Attachments/Files/Deadpool%20-%20No-Intro.ips]]
 
 It can be applied against a verified **No-Intro** ROM, through [Floating IPS](https://github.com/Alcaro/Flips) or [ROM Patcher JS](https://www.marcrobledo.com/RomPatcher.js/).
 
