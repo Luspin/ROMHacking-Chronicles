@@ -16,6 +16,7 @@ However, its isolated ROM signature did match a verified entry from the **[No-In
 | **ROM**  | `7C4A72D8` | `15F245161179AB1959B7DC20E82ADD024D23AA3D` |
 
 I concluded that the only differences between the two files were their iNES headers, and assumed the IPS file might overwrite them, so I applied the patch against a verified **No-Intro** ROM, but found serious graphical issues when loading the patched ROM file in the [Mesen2](https://github.com/SourMesen/Mesen2) emulator:
+
 ![Deadpool - No-Intro - Graphical Issues](Attachments/Screenshots/Deadpool%20-%20No-Intro%20-%20Graphical%20Issues.png)
 
 After further investigation and a bit of trial-and-error, I found a different source ROM in the [NES Files](https://www.nesfiles.com/NES/Ninja_Gaiden/) page:
@@ -26,6 +27,7 @@ After further investigation and a bit of trial-and-error, I found a different so
 | **ROM**  | `119964FF` | `42A3811E17870CD4F06502DE77B3564D424EFC15` |
 
 This matched neither of the intended **File** or **ROM** signatures, but after applying the IPS file against it, I noticed an improvement in the graphical issues; although other issues were still present, e.g. the Deadpool sprite was corrupted:
+
 ![Deadpool - NES Files - Graphical Issues](Attachments/Screenshots/Deadpool%20-%20NES%20Files%20-%20Graphical%20Issues.png)
 
 I then compared the iNES headers from the two **patched** ROM files:
