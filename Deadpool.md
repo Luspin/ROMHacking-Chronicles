@@ -48,7 +48,7 @@ After consulting with ChatGPT, I decided to modify the iNES headers of the **No-
 
 **Success!** I finally had a fully working ROM file for **Deadpool**™:
 
-![[Attachments/Screenshots/Deadpool%20-%20No-Intro%20(Header%20Fix%201).png]]
+![Deadpool - No-Intro (Header Fix 1)](Attachments/Screenshots/Deadpool%20-%20No-Intro%20(Header%20Fix%201).png)
 
 ChatGPT also suggested an additional cleanup of the iNES headers:
 
@@ -58,7 +58,7 @@ ChatGPT also suggested an additional cleanup of the iNES headers:
 
 This was confirmed to work flawlessly, so I generated a new IPS file:
 
-![[Attachments/Files/Deadpool%20-%20No-Intro.ips]]
+![Deadpool - No-Intro](Attachments/Files/Deadpool%20-%20No-Intro.ips)
 
 It can be applied against a verified **No-Intro** ROM, through [Floating IPS](https://github.com/Alcaro/Flips) or [ROM Patcher JS](https://www.marcrobledo.com/RomPatcher.js/).
 
