@@ -1,4 +1,3 @@
-
 **Deadpool**™ is a complete overhaul of the USA release of **Ninja Gaiden** for the NES, and can be downloaded from [ROMHacking.net](https://www.romhacking.net/hacks/4723/).
 
 In this page, the author references an unknown version of the source ROM file, that I couldn't find anywhere:
@@ -37,7 +36,7 @@ I then compared the iNES headers from the two **patched** ROM files:
 | **No-Intro**  | `4e45531a 20204208 00000000 00000001` |
 | **NES Files** | `4e45531a 20204200 00000061 73746572` |
 
-After consulting with ChatGPT, I decided to modify the iNES headers of the **No-Intro** file:
+After consulting with ChatGPT, I decided to modify the iNES headers of the patched **No-Intro** file:
 
 |                             |                                       |
 | --------------------------- | ------------------------------------- |
@@ -47,14 +46,14 @@ After consulting with ChatGPT, I decided to modify the iNES headers of the **No-
 
 ![Deadpool - No-Intro (Header Fix 1)](Attachments/Screenshots/Deadpool%20-%20No-Intro%20(Header%20Fix%201).png)
 
-ChatGPT also suggested an additional cleanup of the iNES headers:
+ChatGPT also suggested further cleanup of the iNES headers:
 
 |                             |                                       |
 | --------------------------- | ------------------------------------- |
-| **No-Intro (Header Fix 2)** | `4e45531a 2020420 00000000 000000000` |
+| **No-Intro (Header Fix 2)** | `4e45531a 20204200 0000000 000000000` |
 
 This was confirmed to work flawlessly, so I generated a new IPS file - [Deadpool - No-Intro](Attachments/Files/Deadpool%20-%20No-Intro.ips)
 
-It can be applied against a verified **No-Intro** ROM file, through [Floating IPS](https://github.com/Alcaro/Flips) or [ROM Patcher JS](https://www.marcrobledo.com/RomPatcher.js/).
+It can be applied against a verified **No-Intro** source ROM file, through [Floating IPS](https://github.com/Alcaro/Flips) or [ROM Patcher JS](https://www.marcrobledo.com/RomPatcher.js/).
 
 Lastly, **BIG** kudos to [Techmoon](https://www.romhacking.net/community/5543/) for all the work put into this ROM hack!
